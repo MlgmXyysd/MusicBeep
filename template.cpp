@@ -1,11 +1,11 @@
 /*
-* Katawaredoki(back) by MlgmXyysd
+* Template by MlgmXyysd
 */
 #include<bits/stdc++.h>
 #include<windows.h>
 #include<pthread.h>
 #include<music.h>
-#define Beat 923
+#define Beat 0
 #define MAX_THREAD 10
 using namespace std;
 void* sound(void* arg);
@@ -15,11 +15,8 @@ struct args {
 }argument;
 pthread_t tid[MAX_THREAD];
 int main(int argc,char **argv) {
-	cout<<"Katawaredoki(back) by MlgmXyysd."<<endl;
-	cout<<"1=C 4/4 =65"<<endl;
-	cout<<"(01)"<<endl;
-	Sound(B3,Beat*4,1);
-	Beep(A6,Beat*2);
+	cout<<"Template by MlgmXyysd."<<endl;
+	cout<<"(00)"<<endl;
 	cout<<"end."<<endl;
 	return 0;
 }

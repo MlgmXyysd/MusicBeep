@@ -6,22 +6,22 @@
 #include<pthread.h>
 #include<music.h>
 #define Beat 923
+#define MAX_THREAD 10
 using namespace std;
 void* sound(void* arg);
+void Sound(int dwFreq,int dwDuration,int id);
 struct args {
 	int Freq,Duration;
 }argument;
+pthread_t tid[MAX_THREAD];
 int main(int argc,char **argv) {
-	pthread_t tid[10];
 	cout<<"Katawaredoki by MlgmXyysd."<<endl;
 	cout<<"1=C 4/4 =65"<<endl;
 	cout<<"(01)"<<endl;
 	Beep(C5,Beat*2);
 	Beep(C2,Beat*2);
 	cout<<"(02)"<<endl;
-	argument.Freq=C3;
-	argument.Duration=Beat*4;
-	pthread_create(&tid[1],NULL,sound,(void*)&argument);
+	Sound(C3,Beat*4,1);
 	Beep(B5,Beat*4);
 	cout<<"(03)"<<endl;
 	argument.Freq=C5;
@@ -398,10 +398,13 @@ int main(int argc,char **argv) {
 	cout<<"end."<<endl;
 	return 0;
 }
+void Sound(int dwFreq,int dwDuration,int id) {
+	argument.Freq=dwFreq;
+	argument.Duration=dwDuration;
+	pthread_create(&tid[id],NULL,sound,(void*)&argument);
+}
 void* sound(void* arg) {
 	struct args *beep=(struct args*)arg;
 	Beep(beep->Freq,beep->Duration);
 	return NULL;
 }
-
-
