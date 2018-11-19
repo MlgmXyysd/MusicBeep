@@ -36,7 +36,7 @@ int main(int argc,char **argv) {
 	pthread_create(&tid[3],NULL,sound,(void*)&argument);
 	Beep(B6*S,Beat*2);
 	cout<<"(04)"<<endl;
-	Beep(C1,Beat*4); //Checked
+	Beep(C1,Beat*4);
 	cout<<"(05)"<<endl;
 	Beep(C5,Beat);
 	Beep(C5,Beat*0.75);
@@ -45,10 +45,10 @@ int main(int argc,char **argv) {
 	Beep(C3,Beat/2);
 	Beep(C2,Beat/2);
 	Beep(C2,Beat/4);
-	Beep(C1,Beat/4); //Checked
+	Beep(C1,Beat/4);
 	cout<<"(06)"<<endl;
 	Beep(C3,Beat*3.5);
-	Beep(C1,Beat/2); //Checked
+	Beep(C1,Beat/2);
 	cout<<"(07)"<<endl;
 	Beep(C5,Beat);
 	Beep(C5,Beat*0.75);
@@ -58,14 +58,14 @@ int main(int argc,char **argv) {
 	Beep(C6,Beat/4);
 	Beep(C5,Beat/2);
 	Beep(C5,Beat/4);
-	Beep(C6,Beat/4); //Checked
+	Beep(C6,Beat/4);
 	cout<<"(08)"<<endl;
 	Beep(C5,Beat);
 	Beep(C3,Beat/3);
 	Beep(C4,Beat/3);
 	Beep(C3,Beat/3);
 	Beep(C2,Beat*1.5);
-	Beep(C1,Beat/2); //Checked
+	Beep(C1,Beat/2);
 	cout<<"(09)"<<endl;
 	Beep(C5,Beat);
 	Beep(C5,Beat*0.75);
@@ -74,14 +74,14 @@ int main(int argc,char **argv) {
 	Beep(C3,Beat/2);
 	Beep(C2,Beat/2);
 	Beep(C2,Beat/4);
-	Beep(C1,Beat/4); //Checked
+	Beep(C1,Beat/4);
 	cout<<"(10)"<<endl;
 	Beep(C3,Beat*2.5);
 	Beep(B5,Beat/2);
 	Beep(C1,Beat/4);
 	Beep(C2,Beat/4);
 	Beep(C3,Beat/4);
-	Beep(C2,Beat/2); //Checked
+	Beep(C2,Beat/2);
 	cout<<"(11)"<<endl;
 	//C2,Beat/4 Linked up.
 	Beep(C1,Beat/4);
@@ -94,7 +94,7 @@ int main(int argc,char **argv) {
 	Beep(C1,Beat/4);
 	Beep(C2,Beat/4);
 	Beep(C3,Beat/4);
-	Beep(C2,Beat/2); //Checked
+	Beep(C2,Beat/2);
 	cout<<"(12)"<<endl;
 	//C2,Beat/4 Linked up.
 	Beep(B5,Beat/4);
@@ -106,7 +106,7 @@ int main(int argc,char **argv) {
 	Beep(C1,Beat/4);
 	Beep(C2,Beat/4);
 	Beep(C3,Beat/4);
-	Beep(C2,Beat/2); //Checked
+	Beep(C2,Beat/2);
 	cout<<"(13)"<<endl;
 	//C2,Beat/4 Linked up.
 	Beep(C1,Beat/4);
@@ -119,7 +119,7 @@ int main(int argc,char **argv) {
 	Beep(C1,Beat/4);
 	Beep(C2,Beat/4);
 	Beep(C3,Beat/4);
-	Beep(C2,Beat*0.75); //Checked
+	Beep(C2,Beat*0.75);
 	cout<<"(14)"<<endl;
 	//C2,Beat/2 Linked up.
 	Beep(B5,Beat/2);
@@ -128,29 +128,29 @@ int main(int argc,char **argv) {
 	Beep(C2,Beat*1.5);
 	Beep(C1,Beat/4);
 	Beep(C2,Beat/4);
-	Beep(C1,Beat*1.75); //Checked
+	Beep(C1,Beat*1.75);
 	cout<<"(15)"<<endl;
 	//C1,Beat*1.5 Linked up.
 	argument.Freq=C5;
 	argument.Duration=Beat*1.75;
 	pthread_create(&tid[1],NULL,sound,(void*)&argument);
 	Beep(C1,Beat*1.75);
-	Beep(C3,Beat*2.5); //Checked
+	Beep(C3,Beat*2.5);
 	cout<<"(16)"<<endl;
 	//C3,Beat*2 Linked up.
 	argument.Freq=D1;
 	argument.Duration=Beat*2;
 	pthread_create(&tid[1],NULL,sound,(void*)&argument);
-	Beep(C5,Beat*2); //Checked
+	Beep(C5,Beat*2);
 	cout<<"(17)"<<endl;
 	Beep(C1,Beat*1.5);
 	argument.Freq=C2;
 	argument.Duration=Beat*2;
 	pthread_create(&tid[1],NULL,sound,(void*)&argument);
 	Beep(C1,Beat*2);
-	Beep(C3,Beat*4.5); //Checked
+	Beep(C3,Beat*4.5);
 	cout<<"(18)"<<endl;
-	//C3,Beat*4 Linked up. Checked
+	//C3,Beat*4 Linked up.
 	cout<<"(19)"<<endl;
 	argument.Freq=C5;
 	argument.Duration=Beat/2;
@@ -163,10 +163,10 @@ int main(int argc,char **argv) {
 	Beep(C3,Beat/2);
 	Beep(C2,Beat/2);
 	Beep(C2,Beat/4);
-	Beep(C1,Beat/4); //Checked
+	Beep(C1,Beat/4);
 	cout<<"(20)"<<endl;
 	Beep(C3,Beat*3.5);
-	Beep(C1,Beat/2); //Checked
+	Beep(C1,Beat/2);
 	cout<<"(21)"<<endl;
 	Beep(C5,Beat);
 	Beep(C5,Beat*0.75);
@@ -176,7 +176,7 @@ int main(int argc,char **argv) {
 	Beep(C6,Beat/4);
 	Beep(C5,Beat/2);
 	Beep(C5,Beat/4);
-	Beep(C6,Beat/4); //Checked
+	Beep(C6,Beat/4);
 	cout<<"(22)"<<endl;
 	Beep(C5,Beat*0.75);
 	Beep(B5,Beat/4);
@@ -184,7 +184,7 @@ int main(int argc,char **argv) {
 	Beep(C4,Beat/3);
 	Beep(C3,Beat/3);
 	Beep(C2,Beat*1.5);
-	Beep(C1,Beat/2); //Checked
+	Beep(C1,Beat/2);
 	cout<<"(23)"<<endl;
 	Beep(C5,Beat);
 	Beep(C5,Beat*0.75);
@@ -193,14 +193,14 @@ int main(int argc,char **argv) {
 	Beep(C3,Beat/2);
 	Beep(C2,Beat/2);
 	Beep(C2,Beat/4);
-	Beep(C1,Beat/4); //Checked
+	Beep(C1,Beat/4);
 	cout<<"(24)"<<endl;
 	Beep(C3,Beat*2.75);
 	Beep(B5,Beat/4);
 	Beep(C1,Beat/4);
 	Beep(C2,Beat/4);
 	Beep(C3,Beat/4);
-	Beep(C2,Beat/2); //Checked
+	Beep(C2,Beat/2);
 	cout<<"(25)"<<endl;
 	//C2,Beat/4 Linked up.
 	Beep(C1,Beat/4);
@@ -213,7 +213,7 @@ int main(int argc,char **argv) {
 	Beep(C1,Beat/4);
 	Beep(C2,Beat/4);
 	Beep(C3,Beat/4);
-	Beep(C2,Beat/2); //Checked
+	Beep(C2,Beat/2);
 	cout<<"(26)"<<endl;
 	//C2,Beat/4 Linked up.
 	Beep(B5,Beat/4);
@@ -225,7 +225,7 @@ int main(int argc,char **argv) {
 	Beep(C1,Beat/4);
 	Beep(C2,Beat/4);
 	Beep(C3,Beat/4);
-	Beep(C2,Beat/2); //Checked
+	Beep(C2,Beat/2);
 	cout<<"(27)"<<endl;
 	//C2,Beat/4 Linked up.
 	Beep(C1,Beat/4);
@@ -238,7 +238,7 @@ int main(int argc,char **argv) {
 	Beep(C1,Beat/4);
 	Beep(C2,Beat/4);
 	Beep(C3,Beat/4);
-	Beep(C2,Beat/2); //Checked
+	Beep(C2,Beat/2);
 	cout<<"(28)"<<endl;
 	//C2,Beat/4 Linked up.
 	Beep(B5,Beat/4);
@@ -250,7 +250,7 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
 	Beep(B3,Beat/4);
-	Beep(B2,Beat/2); //Checked
+	Beep(B2,Beat/2);
 	cout<<"(29)"<<endl;
 	//B2,Beat/4 Linked up.
 	Beep(B1,Beat/4);
@@ -263,7 +263,7 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
 	Beep(B3,Beat/4);
-	Beep(B2,Beat/2); //Checked
+	Beep(B2,Beat/2);
 	cout<<"(30)"<<endl;
 	//B2,Beat/4 Linked up.
 	Beep(A5,Beat/4);
@@ -275,7 +275,7 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
 	Beep(B3,Beat/4);
-	Beep(B2,Beat/2); //Checked
+	Beep(B2,Beat/2);
 	cout<<"(31)"<<endl;
 	//B2,Beat/4 Linked up.
 	Beep(B1,Beat/4);
@@ -288,7 +288,7 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
 	Beep(B3,Beat/4);
-	Beep(B2,Beat/2); //Checked
+	Beep(B2,Beat/2);
 	cout<<"(32)"<<endl;
 	//B2,Beat/4 Linked up.
 	Beep(A5,Beat/4);
@@ -301,7 +301,7 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
 	Beep(B3,Beat/4);
-	Beep(B2,Beat/2); //Checked
+	Beep(B2,Beat/2);
 	cout<<"(33)"<<endl;
 	//B2,Beat/4 Linked up.
 	Beep(B1,Beat/4);
@@ -314,7 +314,7 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
 	Beep(B3,Beat/4);
-	Beep(B2,Beat/2); //Checked
+	Beep(B2,Beat/2);
 	cout<<"(34)"<<endl;
 	//B2,Beat/4 Linked up.
 	Beep(A5,Beat/4);
@@ -326,7 +326,7 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
 	Beep(B3,Beat/4);
-	Beep(B2,Beat/2); //Checked
+	Beep(B2,Beat/2);
 	cout<<"(35)"<<endl;
 	//B2,Beat/4 Linked up.
 	Beep(B1,Beat/4);
@@ -340,7 +340,7 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
 	Beep(B3,Beat/4);
-	Beep(B2,Beat/2); //Checked
+	Beep(B2,Beat/2);
 	cout<<"(36)"<<endl;
 	//B2,Beat/4 Linked up.
 	Beep(A5,Beat/4);
@@ -352,7 +352,7 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
 	Beep(B3,Beat/4);
-	Beep(B2,Beat/2); //Checked
+	Beep(B2,Beat/2);
 	cout<<"(37)"<<endl;
 	//B2,Beat/4 Linked up.
 	Beep(B1,Beat/4);
@@ -365,7 +365,7 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
 	Beep(B3,Beat/4);
-	Beep(B2,Beat/2); //Checked
+	Beep(B2,Beat/2);
 	cout<<"(38)"<<endl;
 	//B2,Beat/4 Linked up.
 	Beep(A5,Beat/4);
@@ -376,25 +376,25 @@ int main(int argc,char **argv) {
 	Beep(A5,Beat*0.75);
 	Beep(B1,Beat/4);
 	Beep(B2,Beat/4);
-	Beep(B1,Beat*1.75); //Checked
+	Beep(B1,Beat*1.75);
 	cout<<"(39)"<<endl;
 	//B1,Beat*1.5 Linked up.
 	argument.Freq=B5;
 	argument.Duration=Beat*2;
 	pthread_create(&tid[1],NULL,sound,(void*)&argument);
 	Beep(B1,Beat*2);
-	Beep(B3,Beat*4.5); //Checked
+	Beep(B3,Beat*4.5);
 	cout<<"(40)"<<endl;
-	//B3,Beat*4 Linked up. Checked
+	//B3,Beat*4 Linked up.
 	cout<<"(41)"<<endl;
 	Beep(B1,Beat*1.5);
 	argument.Freq=B2;
 	argument.Duration=Beat*2;
 	pthread_create(&tid[1],NULL,sound,(void*)&argument);
 	Beep(B1,Beat*2);
-	Beep(B3,Beat*4.5); //Checked
+	Beep(B3,Beat*4.5);
 	cout<<"(42)"<<endl;
-	//B3,Beat*4 Linked up. Checked
+	//B3,Beat*4 Linked up.
 	cout<<"end."<<endl;
 	return 0;
 }
@@ -403,4 +403,5 @@ void* sound(void* arg) {
 	Beep(beep->Freq,beep->Duration);
 	return NULL;
 }
+
 
