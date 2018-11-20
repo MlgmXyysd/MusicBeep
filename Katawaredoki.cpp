@@ -1,39 +1,28 @@
 /*
 * Katawaredoki by MlgmXyysd
+* mlgmxyysd991@gmail.com
+* mlgmxyysd@vip.qq.com
+* mlgmxyysd@qq.com
+* Bilibili @mlgmxyysd
 */
 #include<bits/stdc++.h>
-#include<windows.h>
-#include<pthread.h>
 #include<music.h>
 #define Beat 923
-#define MAX_THREAD 10
 using namespace std;
-void* sound(void* arg);
-void Sound(int dwFreq,int dwDuration,int id);
-struct args {
-	int Freq,Duration;
-}argument;
-pthread_t tid[MAX_THREAD];
 int main(int argc,char **argv) {
 	cout<<"Katawaredoki by MlgmXyysd."<<endl;
-	cout<<"1=C 4/4 =65"<<endl;
+	cout<<"1=C 4/4 bpm=65"<<endl;
 	cout<<"(01)"<<endl;
 	Beep(C5,Beat*2);
 	Beep(C2,Beat*2);
 	cout<<"(02)"<<endl;
-	Sound(C3,Beat*4,1);
+	Sound(C3,Beat*4);
 	Beep(B5,Beat*4);
 	cout<<"(03)"<<endl;
-	argument.Freq=C5;
-	argument.Duration=Beat*2;
-	pthread_create(&tid[1],NULL,sound,(void*)&argument);
+	Sound(C5,Beat*2);
 	Beep(C1,Beat*2);
-	argument.Freq=C4;
-	argument.Duration=Beat*2;
-	pthread_create(&tid[2],NULL,sound,(void*)&argument);
-	argument.Freq=C1;
-	argument.Duration=Beat*2;
-	pthread_create(&tid[3],NULL,sound,(void*)&argument);
+	Sound(C4,Beat*2);
+	Sound(C1,Beat*2);
 	Beep(B6*S,Beat*2);
 	cout<<"(04)"<<endl;
 	Beep(C1,Beat*4);
@@ -131,30 +120,22 @@ int main(int argc,char **argv) {
 	Beep(C1,Beat*1.75);
 	cout<<"(15)"<<endl;
 	//C1,Beat*1.5 Linked up.
-	argument.Freq=C5;
-	argument.Duration=Beat*1.75;
-	pthread_create(&tid[1],NULL,sound,(void*)&argument);
+	Sound(C5,Beat*1.75);
 	Beep(C1,Beat*1.75);
 	Beep(C3,Beat*2.5);
 	cout<<"(16)"<<endl;
 	//C3,Beat*2 Linked up.
-	argument.Freq=D1;
-	argument.Duration=Beat*2;
-	pthread_create(&tid[1],NULL,sound,(void*)&argument);
+	Sound(D1,Beat*2);
 	Beep(C5,Beat*2);
 	cout<<"(17)"<<endl;
 	Beep(C1,Beat*1.5);
-	argument.Freq=C2;
-	argument.Duration=Beat*2;
-	pthread_create(&tid[1],NULL,sound,(void*)&argument);
+	Sound(C2,Beat*2);
 	Beep(C1,Beat*2);
 	Beep(C3,Beat*4.5);
 	cout<<"(18)"<<endl;
 	//C3,Beat*4 Linked up.
 	cout<<"(19)"<<endl;
-	argument.Freq=C5;
-	argument.Duration=Beat/2;
-	pthread_create(&tid[1],NULL,sound,(void*)&argument);
+	Sound(C5,Beat/2);
 	Beep(C1,Beat/2);
 	Beep(B6,Beat/2);
 	Beep(C5,Beat*0.75);
@@ -379,32 +360,18 @@ int main(int argc,char **argv) {
 	Beep(B1,Beat*1.75);
 	cout<<"(39)"<<endl;
 	//B1,Beat*1.5 Linked up.
-	argument.Freq=B5;
-	argument.Duration=Beat*2;
-	pthread_create(&tid[1],NULL,sound,(void*)&argument);
+	Sound(B5,Beat*2);
 	Beep(B1,Beat*2);
 	Beep(B3,Beat*4.5);
 	cout<<"(40)"<<endl;
 	//B3,Beat*4 Linked up.
 	cout<<"(41)"<<endl;
 	Beep(B1,Beat*1.5);
-	argument.Freq=B2;
-	argument.Duration=Beat*2;
-	pthread_create(&tid[1],NULL,sound,(void*)&argument);
+	Sound(B2,Beat*2);
 	Beep(B1,Beat*2);
 	Beep(B3,Beat*4.5);
 	cout<<"(42)"<<endl;
 	//B3,Beat*4 Linked up.
 	cout<<"end."<<endl;
 	return 0;
-}
-void Sound(int dwFreq,int dwDuration,int id) {
-	argument.Freq=dwFreq;
-	argument.Duration=dwDuration;
-	pthread_create(&tid[id],NULL,sound,(void*)&argument);
-}
-void* sound(void* arg) {
-	struct args *beep=(struct args*)arg;
-	Beep(beep->Freq,beep->Duration);
-	return NULL;
 }
