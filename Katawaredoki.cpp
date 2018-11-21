@@ -11,7 +11,7 @@
 using namespace std;
 int main(int argc,char **argv) {
 	cout<<"Katawaredoki by MlgmXyysd."<<endl;
-	cout<<"1=C 4/4 bpm=65"<<endl;
+	cout<<"1=C 4/4 bpm=65 42"<<endl;
 	cout<<"(01)"<<endl;
 	Beep(C5,Beat*2);
 	Beep(C2,Beat*2);
